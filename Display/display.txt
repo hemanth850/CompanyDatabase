@@ -1,0 +1,20 @@
+--displaying various clauses
+
+--find all employees ordered by sex and then their name
+
+SELECT first_name,sex FROM CompanyDatabase.employee ORDER BY sex , first_name ,last_name;
+
+-- find the first 5 employees in the table
+
+SELECT * FROM CompanyDatabase.employee LIMIT 5;
+
+--find the forename and surname using AS command
+
+SELECT first_name AS Forename , last_name AS Surname FROM CompanyDatabase.employee;
+
+--find out all the different genders in the employee table
+
+SELECT DISTINCT sex FROM CompanyDatabase.employee;
+
+--find out all the different branch id's in the employee table
+SELECT DISTINCT branch_id FROM CompanyDatabase.employee;
