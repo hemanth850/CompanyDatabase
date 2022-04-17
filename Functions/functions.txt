@@ -1,0 +1,28 @@
+--functions COUNT() , SUM() , AVG()
+
+--find the no. of supervisors using COUNT() fun
+
+SELECT COUNT(super_id) FROM employee;
+
+--find the number of unique branch id from employee table
+SELECT COUNT(DISTINCT branch_id) FROM employee;
+
+--find the no. of female employee born after 1970
+
+SELECT  COUNT(emp_id) FROM employee WHERE sex='F' AND birth_day > '1971-01-01';
+
+--find average salary for male employees from employee table
+
+SELECT AVG(salary) FROM employee WHERE sex='M';
+
+--find the sum of all employees salary
+
+SELECT SUM(salary) FROM employee;
+
+--find the number of males and no. of females in the employee table
+
+SELECT COUNT(sex) , sex FROM employee GROUP BY sex;
+
+--find the total sales of each salesman
+
+SELECT emp_id , SUM(toatal_sales) FROM works_with GROUP BY emp_id;
