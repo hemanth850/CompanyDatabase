@@ -1,0 +1,10 @@
+--creating branch supplier table
+
+DROP TABLE IF EXISTS CompanyDatabase.branch_supplier;
+CREATE TABLE CompanyDatabase.branch_supplier(
+    branch_id INT,
+    supplier_name VARCHAR(20),
+    supply_type VARCHAR(20),
+    PRIMARY KEY(branch_id,supplier_name),
+    FOREIGN KEY (branch_id) REFERENCES CompanyDatabase.branch(branch_id) ON DELETE CASCADE
+);

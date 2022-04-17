@@ -1,0 +1,11 @@
+--creating client table
+
+SET FOREIGN_KEY_CHECKS=0;
+DROP TABLE IF EXISTS CompanyDatabase.client;
+SET FOREIGN_KEY_CHECKS=1;
+CREATE TABLE CompanyDatabase.client(
+    client_id INT PRIMARY KEY,
+    client_name VARCHAR(20),
+    branch_id INT,
+    FOREIGN KEY (branch_id) REFERENCES CompanyDatabase.branch(branch_id) ON DELETE SET NULL
+);

@@ -1,0 +1,13 @@
+--creating works_with table
+
+
+DROP TABLE IF EXISTS CompanyDatabase.works_with;
+CREATE TABLE CompanyDatabase.works_with(
+    emp_id INT ,
+    client_id INT ,
+    toatal_sales INT,
+    PRIMARY KEY(emp_id,client_id),
+    FOREIGN KEY (emp_id) REFERENCES CompanyDatabase.employee(emp_id) ON DELETE CASCADE,
+    FOREIGN KEY (client_id) REFERENCES CompanyDatabase.client(client_id) ON DELETE CASCADE
+);
+

@@ -1,0 +1,11 @@
+--creating branch table
+
+DROP TABLE IF EXISTS CompanyDatabase.branch;
+SET FOREIGN_KEY_CHECKS=1;
+CREATE TABLE CompanyDatabase.branch(
+    branch_id INT PRIMARY KEY,
+    branch_name VARCHAR(10),
+    mgr_id INT,
+    mgr_start_data DATE,
+    FOREIGN KEY (mgr_id) REFERENCES CompanyDatabase.employee(emp_id) ON DELETE SET NULL
+);
