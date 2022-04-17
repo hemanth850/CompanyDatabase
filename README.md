@@ -11,3 +11,4 @@ Execution steps:
 3. Display Folder gives various clauses to displaying the table (only simple SELECT command)
 4. Functions Folder gives various clauses of functions you can use in MySQL 
 5. Wildcards (coming soon)
+6. Unions (coming soon)
