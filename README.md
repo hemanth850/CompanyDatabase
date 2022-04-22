@@ -13,3 +13,4 @@ Execution steps:
 5. Wildcards 
 6. Unions 
 7. Joins (coming soon)
+8. Nested Queries (coming soon)
