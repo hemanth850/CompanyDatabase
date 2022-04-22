@@ -1,0 +1,14 @@
+--UNIONS
+
+--find a list of employees and branch names
+
+SELECT first_name FROM employee UNION SELECT branch_name from branch;
+
+--find the list of all clients and branch suppliers name with their branch ids
+
+SELECT client_name,branch_id FROM client UNION SELECT supplier_name,branch_id from branch_supplier;
+
+
+--find the list of all money spent and earned by the company
+
+SELECT SUM(salary) AS 'spent&earned' FROM employee UNION SELECT SUM(toatal_sales) FROM works_with;
