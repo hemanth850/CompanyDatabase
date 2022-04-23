@@ -1,0 +1,15 @@
+--joins
+
+--find all branches and the names of their managers
+
+SELECT employee.emp_id , employee.first_name AS 'supervisor', branch.branch_name FROM employee JOIN branch ON emp_id = mgr_id;
+
+
+--find all branches and the names of their managers but print all employee names
+
+SELECT employee.emp_id , employee.first_name ,branch.branch_name FROM employee LEFT JOIN branch ON emp_id = mgr_id;
+
+--find all branches and the names of their managers but print all branch names
+
+SELECT employee.emp_id , employee.first_name ,branch.branch_name FROM employee RIGHT JOIN branch ON emp_id = mgr_id;
+
