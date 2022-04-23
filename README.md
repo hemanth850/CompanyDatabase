@@ -12,5 +12,7 @@ Execution steps:
 4. Functions Folder gives various clauses of functions you can use in MySQL 
 5. Wildcards 
 6. Unions 
-7. Joins (coming soon)
+7. Joins 
 8. Nested Queries (coming soon)
+9. ON DELETE (coming soon)
+10. Triggers and Delimiters (coming soon)
