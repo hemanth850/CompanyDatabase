@@ -1,0 +1,19 @@
+--NESTED QUERIES
+
+--find all employees who have sold over 30000 to a client
+
+--with nesting
+
+SELECT first_name , last_name FROM employee WHERE employee.emp_id IN (
+    SELECT works_with.emp_id FROM works_with WHERE toatal_sales>30000
+);
+
+--wihtout nesting 
+SELECT first_name , last_name, SUM(toatal_sales) from EMPLOYEE JOIN works_with ON works_with.emp_id = employee.emp_id  WHERE toatal_sales>30000 GROUP BY works_with.emp_id;
+
+
+--find all clients who are handled by the branch that Michal Scott handles (Assume you know Michal's emp_id)
+
+SELECT client_name FROM client WHERE branch_id=(
+SELECT branch.branch_id FROM branch WHERE mgr_id =102 LIMIT 1
+);
