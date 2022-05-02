@@ -1,0 +1,10 @@
+--onDelete
+
+--delete Michal Scott from table
+
+DELETE FROM employee WHERE emp_id=102;
+
+--delete branch id 2 from branch supplier 
+
+DELETE FROM branch_supplier WHERE branch_id=2;
+
