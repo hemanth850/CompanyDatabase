@@ -13,6 +13,6 @@ Execution steps:
 5. Wildcards 
 6. Unions 
 7. Joins 
-8. Nested Queries (coming soon)
-9. ON DELETE (coming soon)
-10. Triggers and Delimiters (coming soon)
+8. Nested Queries
+9. ON DELETE 
+10. Triggers and Delimiters
